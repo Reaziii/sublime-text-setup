@@ -1,8 +1,11 @@
 <snippet>
   <content><![CDATA[
  
+  
 /*
-  Bismillahir Rahmanir Raheem
+    Bismillahir Rahmanir Raheem
+    Think Twice Code Once
+    author : reaziii
 */
 #include<bits/stdc++.h>
 #define sc(x)        scanf("%lld",&x)
@@ -15,7 +18,7 @@
 #define input        freopen("input.txt","r",stdin);
 #define output       freopen("output.txt","w",stdout)
 #define infi         INT_MAX
-#define max_value    3000000
+#define m_v          3000000
 #define pii          pair<int,int>
 #define pch          pair<char,char>
 #define pll          pair<ll,ll>
@@ -23,36 +26,42 @@
 #define mp           make_pair
 #define pb           push_back
 #define clr(x)       memset(x,0,sizeof(x))
-
+#define frx(x,y)     for(int x=0;x<y;x++)
+#define deb(x)       cout<<x
+#define ideb(i,x)    cout<<i<<" "<<x
+#define F            first
+#define S            second
 using namespace std;
 typedef long long int ll;
 typedef unsigned long long int ull;
-
-
+bool checkbitt(ll num,int pos);
+ll setbitt(ll num,ll pos);
+ll resetbitt(ll num,int pos);
  //.................___Start from here___.................//
 //.................._____________________................//
 
 
+int solve(){
+	
 
 
 
 
 
+
+	return 0;
+}
 int main(){
     input;
     output;
-
     int cs=1;
     int cn=1;
     //cin>>cs;
     while(cs--){
-        //start form here//
+        solve();
         
-
-
     }
 }
-
 ]]></content>
   <tabTrigger>c++</tabTrigger>
   <description></description>
