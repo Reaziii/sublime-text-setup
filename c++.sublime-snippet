@@ -27,18 +27,20 @@
 #define pb           push_back
 #define clr(x)       memset(x,0,sizeof(x))
 #define frx(x,y)     for(int x=0;x<y;x++)
-#define deb(x)       cout<<x
-#define ideb(i,x)    cout<<i<<" "<<x
-#define F            first
-#define S            second
+#define ff           first
+#define ss           second
 using namespace std;
 typedef long long int ll;
 typedef unsigned long long int ull;
 bool checkbitt(ll num,int pos);
 ll setbitt(ll num,ll pos);
 ll resetbitt(ll num,int pos);
+
+
  //.................___Start from here___.................//
 //.................._____________________................//
+
+
 
 
 int solve(){
@@ -46,14 +48,17 @@ int solve(){
 
 
 
-
-
-
 	return 0;
 }
 int main(){
-    input;
-    output;
+#ifndef ONLINE_JUDGE
+  input;
+  output;
+#endif
+#ifdef ONLINE_JUDGE
+  ios_base::sync_with_stdio(false);
+  cin.tie(0);
+#endif
     int cs=1;
     int cn=1;
     //cin>>cs;
@@ -62,6 +67,13 @@ int main(){
         
     }
 }
+
+
+bool checkbitt(ll num,int pos){return (num>>pos) & 1;}
+ll setbitt(ll num,ll pos){return (1<<pos) | num;}
+ll resetbitt(ll num,int pos){if(!checkbitt(num,pos)) return num;else return (1<<pos)^num;}
+
+
 ]]></content>
   <tabTrigger>c++</tabTrigger>
   <description></description>
