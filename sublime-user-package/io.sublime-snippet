@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+freopen("input.txt","r",stdin);
+freopen("output.txt","w",stdout);
+]]></content>
+  <tabTrigger>io</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>
