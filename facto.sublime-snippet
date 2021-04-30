@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[
+ll lp[N];
+vector<ll> pr;
+void precal() {
+	for (int i = 2; i < N; i++) {
+		if (lp[i] == 0) {
+			lp[i] = i;
+			pr.push_back(i);
+		}
+
+		for (int j = 0; j < pr.size(); j++) {
+			if (i * pr[j] >= N) break;
+			ll t = i * pr[j];
+			lp[t] = pr[j];
+		}
+	}
+}
+vector<pll> fct(ll x) {
+	vector<pll> ret;
+	while (x > 1) {
+		ll t = lp[x];
+		int c = 0;
+		while (x % t == 0) {
+			x /= t;
+			c++;
+		}
+		ret.push_back({t, c});
+	}
+	return ret;
+}
+
+]]></content>
+  <tabTrigger>facto</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

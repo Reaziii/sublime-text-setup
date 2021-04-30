@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[
+int par[N];
+int findparent(int x) {
+	if (par[x] == x) return x;
+	return par[x] = findparent(par[x]);
+}
+void make_union(int u, int v) {
+	u = findparent(u);
+	v = findparent(v);
+	if (u == v) return;
+	if (u > v) swap(u, v);
+	par[v] = u;
+}
+]]></content>
+  <tabTrigger>dsu</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

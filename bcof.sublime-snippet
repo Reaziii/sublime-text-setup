@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[
+ll bcof[1001][1001];
+ll binomialCoeff(ll n, ll k)
+{
+    // Base Cases
+    if (k > n)
+        return 0;
+    if (k == 0 || k == n)
+        return 1;
+
+    if (bcof[n][k] != -1) return bcof[n][k];
+    // Recur
+    return bcof[n][k] =  (binomialCoeff(n - 1, k - 1) % mod + binomialCoeff(n - 1, k) % mod) % mod;
+}
+
+]]></content>
+  <tabTrigger>bcof</tabTrigger>
+  <description></description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>
